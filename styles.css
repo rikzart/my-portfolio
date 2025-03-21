@@ -1,79 +1,108 @@
-/* Общие стили для страницы */
+/* Общие стили */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-/* Логотип */
-.logo {
+h2 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    text-transform: uppercase;
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.name {
-    color: #333;
-}
-
-.surname {
-    color: #ff6347; /* Красный акцент для фамилии */
+    color: #444;
+    margin-bottom: 15px;
 }
 
 /* Навигационное меню */
-nav {
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #333;
+    padding: 15px 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
+    display: flex;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #ff9a8b;
 }
 
 /* Разделы */
 section {
-    margin: 30px auto;
-    padding: 20px;
+    margin: 80px auto 50px;
+    padding: 40px 20px;
     max-width: 900px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 /* Футер */
 footer {
+    text-align: center;
+    padding: 20px;
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    text-align: center;
 }
+
+/* Анимации и эффекты */
+nav ul li a {
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+section {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
