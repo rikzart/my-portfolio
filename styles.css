@@ -1,13 +1,28 @@
 /* Общие стили для страницы */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
-h2 {
+/* Логотип */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
     color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.name {
+    color: #333;
+}
+
+.surname {
+    color: #ff6347; /* Красный акцент для фамилии */
 }
 
 /* Навигационное меню */
@@ -52,4 +67,13 @@ section {
 section h2 {
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
 }
